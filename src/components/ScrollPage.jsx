@@ -4,7 +4,7 @@ import Page from "../Page.jsx"
 
 import React from 'react'
 
-const ScrollAnimation = () => {
+const ScrollPage = () => {
     
     const { scrollYProgress } = useScroll()
     
@@ -20,6 +20,7 @@ const ScrollAnimation = () => {
                     right: 0,
                     height: 10,
                     originX: 0,
+                    z: 1,
                     backgroundColor: "#ff0088",
                 }}
             />
@@ -28,5 +29,5 @@ const ScrollAnimation = () => {
     )
 }
 
-export default ScrollAnimation
+export default ScrollPage
 

@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
 :root{
   background: #16171d;
   color: #f0f0f0;
+  
 }
 .starfield {
   position: fixed;

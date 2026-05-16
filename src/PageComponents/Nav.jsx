@@ -1,8 +1,14 @@
 import React from 'react'
+import ToggleIcon from '../components/ui/ToggleIcon'
+import { motion } from 'framer-motion'
 
 const Nav = () => {
   return (
-       <header className="py-5">
+       <motion.nav 
+          initial={{opacity:0,y:50}}
+          whileInView={{opacity:1,y:0}}
+          className="py-5 sticky top-0 z-10 backdrop-blur-xl"
+        >
           <div className="w-[90%] max-w-300 mx-auto flex justify-between items-center">
             
             <a href="index.html" className="no-underline text-[#ff0077] hover:text-[#ff0055]">
@@ -11,30 +17,31 @@ const Nav = () => {
               </h1>
             </a>
 
-            <nav>
+            <div className="flex gap-2 md:gap-4">
               <a
                 href="#about"
-                className="ml-5 no-underline  font-medium hover:text-[#ff6b6b]"
+                className="no-underline  font-medium hover:text-[#ff6b6b]"
               >
                 About
               </a>
 
               <a
                 href="#projects"
-                className="ml-5 no-underline  font-medium hover:text-[#ff6b6b]"
+                className="no-underline  font-medium hover:text-[#ff6b6b]"
               >
                 Projects
               </a>
 
               <a
                 href="#contact"
-                className="ml-5 no-underline  font-medium hover:text-[#ff6b6b]"
+                className="no-underline  font-medium hover:text-[#ff6b6b]"
               >
                 Contact
               </a>
-            </nav>
+              <ToggleIcon  className="translate-x-4 hover:scale-110 transition-transform"/>
+            </div>
           </div>
-        </header>
+      </motion.nav>
   )
 }
 

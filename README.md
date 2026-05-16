@@ -1,16 +1,63 @@
-# React + Vite
+# 🚀 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated developer portfolio built with React, Tailwind CSS, Three.js (React Three Fiber), Motion, and Lucide React.  
+It showcases my skills, projects, and experience as a MERN Stack Developer with smooth UI/UX and interactive 3D elements.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
+https://your-portfolio-link.com
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Preview
+![Portfolio Preview](./preview.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Tech Stack
+
+- React.js
+- Tailwind CSS
+- Three.js (React Three Fiber)
+- Motion (Framer Motion alternative)
+- Lucide React
+- Vite
+
+---
+
+## ✨ Features
+
+- Smooth scroll-based animations
+- Interactive 3D background using Three.js
+- Modern responsive UI design
+- Light/Dark mode toggle
+- Scroll indicator & reveal animations
+- Clean component-based architecture
+- Fast performance with Vite
+
+---
+
+## 📁 Project Structure
+
+src/
+├── components/
+│ ├── Hero/
+│ ├── About/
+│ ├── Projects/
+│ ├── Navbar/
+│ ├── ScrollIndicator/
+│
+├── assets/
+├── context/
+├── hooks/
+├── styles/
+├── App.jsx
+└── main.jsx
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/your-username/portfolio.git
