@@ -1,48 +1,78 @@
-import React from 'react'
-import ToggleIcon from '../components/ui/ToggleIcon'
-import { motion } from 'framer-motion'
+import React from "react";
+import ToggleIcon from "../components/ui/ToggleIcon";
+import { motion } from "framer-motion";
+import { useTheme } from "../Theme"; // update path if needed
 
 const Nav = () => {
+  const { isDark } = useTheme();
+
   return (
-       <motion.nav 
-          initial={{opacity:0,y:50}}
-          whileInView={{opacity:1,y:0}}
-          className="py-5 sticky top-0 z-10 backdrop-blur-xl"
+    <motion.nav
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`
+        sticky top-0 z-50 py-5 backdrop-blur-xl border-b transition-all duration-300
+        
+        ${
+          isDark
+            ? "border-white/10 bg-[#121212]/70"
+            : "border-black/10 bg-white/70"
+        }
+      `}
+    >
+      <div className="mx-auto flex w-[90%] max-w-300 items-center justify-between">
+        
+        {/* Logo */}
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          href="/"
+          className="no-underline"
         >
-          <div className="w-[90%] max-w-300 mx-auto flex justify-between items-center">
-            
-            <a href="index.html" className="no-underline text-[#ff0077] hover:text-[#ff0055]">
-              <h1 className="text-2xl font-bold">
-                Hayd
-              </h1>
-            </a>
+          <h1 className="text-2xl font-bold tracking-tight text-[#00d4ff] transition-colors hover:text-[#00b0ff]">
+            Hayd
+          </h1>
+        </motion.a>
 
-            <div className="flex gap-2 md:gap-4">
-              <a
-                href="#about"
-                className="no-underline  font-medium hover:text-[#ff6b6b]"
-              >
-                About
-              </a>
+        {/* Links */}
+        <div className="flex items-center gap-2 md:gap-6">
+          
+          {["About", "Projects", "Contact"].map((item, index) => (
+            <motion.a
+              key={index}
+              whileHover={{ y: -2 }}
+              href={`#${item.toLowerCase()}`}
+              className={`
+                relative text-sm md:text-base font-medium transition-all duration-300
+                
+                ${
+                  isDark
+                    ? "text-white/80 hover:text-[#ff6b6b]"
+                    : "text-black/70 hover:text-[#ff6b6b]"
+                }
+              `}
+            >
+              {item}
 
-              <a
-                href="#projects"
-                className="no-underline  font-medium hover:text-[#ff6b6b]"
-              >
-                Projects
-              </a>
+              <span
+                className="
+                  absolute left-0 -bottom-1 h-0.5 w-0
+                  bg-[#ff0077] transition-all duration-300
+                  group-hover:w-full
+                "
+              />
+            </motion.a>
+          ))}
 
-              <a
-                href="#contact"
-                className="no-underline  font-medium hover:text-[#ff6b6b]"
-              >
-                Contact
-              </a>
-              <ToggleIcon  className="translate-x-4 hover:scale-110 transition-transform"/>
-            </div>
+          {/* Theme Toggle */}
+          <div>
+            <ToggleIcon className="hover:scale-110 transition-transform" />
           </div>
-      </motion.nav>
-  )
-}
+        </div>
+      </div>
+    </motion.nav>
+  );
+};
 
-export default Nav
+export default Nav;

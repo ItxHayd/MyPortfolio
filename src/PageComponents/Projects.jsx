@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
   return (
@@ -23,22 +24,48 @@ const Projects = () => {
     >
         <div className="w-[90%] max-w-300 mx-auto" >
 
-            <h2 className="text-center mb-10 text-4xl">
-                My Projects
+            <h2 className=" text-[#00d4ff] mb-10 text-4xl">
+                Projects:
             </h2>
 
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
+            
 
-                <div className="border-t border-l border-amber-500 p-5 rounded-xl shadow-[2px_4px_0px_rgba(255,0,0,1)]">
-                    <h3 className="mb-2.5 text-[20px] ">
-                        Portfolio Website
-                    </h3>
-
-                    <p className="text-[#666]">
-                        A personal portfolio site to showcase my skills and projects.
-                    </p>
-                </div>
+                <ProjectCard
+                    image="/projectsMedia/portfolio.png"
+                    title="3D Developer Portfolio"
+                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
+                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
+                    github="https://github.com/ItxHayd/MyPortfolio"
+                    demo="https://yourdemo.com"
+                />
+                <ProjectCard
+                    image="/projectsMedia/portfolio.png"
+                    title="3D Developer Portfolio"
+                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
+                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
+                    github="https://github.com/ItxHayd/MyPortfolio"
+                    demo="https://yourdemo.com"
+                />
+                <ProjectCard
+                    image="/projectsMedia/portfolio.png"
+                    title="3D Developer Portfolio"
+                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
+                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
+                    github="https://github.com/ItxHayd/MyPortfolio"
+                    demo="https://yourdemo.com"
+                />
+                <ProjectCard
+                    image="/projectsMedia/portfolio.png"
+                    title="3D Developer Portfolio"
+                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
+                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
+                    github="https://github.com/ItxHayd/MyPortfolio"
+                    demo="https://yourdemo.com"
+                />
+              
+            
                
                
                 

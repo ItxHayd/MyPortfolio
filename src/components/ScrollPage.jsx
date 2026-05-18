@@ -20,7 +20,6 @@ const ScrollPage = () => {
                     right: 0,
                     height: 10,
                     originX: 0,
-                    z: 1,
                     backgroundColor: "#ff0088",
                 }}
             />
