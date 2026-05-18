@@ -1,9 +1,32 @@
 @import "tailwindcss";
+ 
 
 @theme {
   --font-inter: "Inter", sans-serif;
 }
+.click-ripple {
+  position: fixed;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgb(184, 59, 59);
+  border-radius: 9999px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out forwards;
+  z-index: 9999;
+}
 
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(6);
+  }
+}
 :root{
   background: #16171d;
   color: #f0f0f0;
@@ -11,11 +34,12 @@
 }
 .starfield {
   position: fixed;
+  inset: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* pushes it behind everything */
+  z-index: 0; /* pushes it behind everything */
   display: block;
   pointer-events: none; /* allows clicks through canvas */
 }
