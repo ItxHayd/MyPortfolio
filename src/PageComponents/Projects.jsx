@@ -41,11 +41,11 @@ const Projects = () => {
                     demo="https://yourdemo.com"
                 />
                 <ProjectCard
-                    image="/projectsMedia/portfolio.png"
-                    title="3D Developer Portfolio"
-                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
-                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
-                    github="https://github.com/ItxHayd/MyPortfolio"
+                    image="/projectsMedia/img_gen.jpg"
+                    title="AI Image Gen Site"
+                    description="Modern image genration site built with MERN and CloudFlare AI Worker with Authentication"
+                    tech={["React", "Tailwind", "Typescript", "MongoDB","Redis","Express"]}
+                    github="https://github.com/ItxHayd/Free_IMG_GEN"
                     demo="https://yourdemo.com"
                 />
                 <ProjectCard
