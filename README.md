@@ -11,7 +11,8 @@ https://your-portfolio-link.com
 ---
 
 ## 📸 Preview
-![Portfolio Preview](./preview.png)
+![Portfolio Preview]<img width="1303" height="757" alt="portfolio" src="https://github.com/user-attachments/assets/403fd3e1-6e30-4c51-90e2-86758ac4e77c" />
+
 
 ---
 
@@ -49,8 +50,6 @@ src/
 │ ├── ScrollIndicator/
 │
 ├── assets/
-├── context/
-├── hooks/
 ├── styles/
 ├── App.jsx
 └── main.jsx
@@ -60,4 +59,4 @@ src/
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/ItxHayd/MyPortfolio.git
