@@ -59,7 +59,7 @@ const Projects = () => {
                 <ProjectCard
                     image="/projectsMedia/bg-rem.jpg"
                     title="Image BackGround Remover"
-                    description="ModernA Simple Background remover using Cloudflare and Basic JS along with remove-bg api"
+                    description="Simple Background remover using Cloudflare and Basic JS along with remove-bg api"
                     tech={["Remove-bg", "Cloudflare Workers", "JS"]}
                     github="https://github.com/ItxHayd/Background_Remover"
                     demo="https://itxhayd.github.io/Background_Remover/"
