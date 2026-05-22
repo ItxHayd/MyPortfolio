@@ -10,6 +10,7 @@ export default function ProjectCard({
   tech = [],
   github,
   demo,
+  demoIsAvailable = true,
 }) {
   const { isDark } = useTheme();
 
@@ -91,25 +92,25 @@ export default function ProjectCard({
         {/* Buttons */}
         <div className="flex items-center gap-3 pt-2">
           {/* Live Demo */}
-          <motion.a
-            whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.03 }}
-            href={demo}
-            target="_blank"
-            rel="noreferrer"
-            className={`
-              flex items-center gap-2 rounded-xl px-4 py-2 text-[12px] md:text-sm font-semibold transition-all
-              
-              ${
-                isDark
-                  ? "bg-white text-black"
-                  : "bg-[#121212] text-white"
-              }
-            `}
-          >
-            <ExternalLink size={16} />
-            Live Demo
-          </motion.a>
+           { demoIsAvailable && (<motion.a
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              href={demo}
+              target="_blank"
+              rel="noreferrer"
+              className={`
+                flex items-center gap-2 rounded-xl px-4 py-2 text-[12px] md:text-sm font-semibold transition-all
+                
+                ${
+                  isDark
+                    ? "bg-white text-black"
+                    : "bg-[#121212] text-white"
+                }
+              `}
+            >
+              <ExternalLink size={16} />
+              Live Demo
+            </motion.a>)}
 
           {/* GitHub */}
           <motion.a

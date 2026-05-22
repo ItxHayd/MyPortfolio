@@ -38,7 +38,7 @@ const Projects = () => {
                     description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
                     tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
                     github="https://github.com/ItxHayd/MyPortfolio"
-                    demo="https://yourdemo.com"
+                    demoIsAvailable = {false}
                 />
                 <ProjectCard
                     image="/projectsMedia/img_gen.jpg"
@@ -49,20 +49,20 @@ const Projects = () => {
                     demo="https://yourdemo.com"
                 />
                 <ProjectCard
-                    image="/projectsMedia/portfolio.png"
-                    title="3D Developer Portfolio"
-                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
-                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
-                    github="https://github.com/ItxHayd/MyPortfolio"
-                    demo="https://yourdemo.com"
+                    image="/projectsMedia/Static-gen.jpg"
+                    title="Static Site Generator (Node)"
+                    description="A lightweight static website generator built with Node.js that converts templates and content into fast, SEO-friendly static HTML pages. Ideal for blogs, portfolios, and small websites with minimal setup and fast performance."
+                    tech={["Glob", "EJS", "Node"]}
+                    github="https://github.com/ItxHayd/Static-Website_Generator"
+                    demoIsAvailable = {false}
                 />
                 <ProjectCard
-                    image="/projectsMedia/portfolio.png"
-                    title="3D Developer Portfolio"
-                    description="Modern animated portfolio built with React Three Fiber and smooth motion effects."
-                    tech={["React", "Tailwind", "Framer Motion", "Three.js"]}
-                    github="https://github.com/ItxHayd/MyPortfolio"
-                    demo="https://yourdemo.com"
+                    image="/projectsMedia/bg-rem.jpg"
+                    title="Image BackGround Remover"
+                    description="ModernA Simple Background remover using Cloudflare and Basic JS along with remove-bg api"
+                    tech={["Remove-bg", "Cloudflare Workers", "JS"]}
+                    github="https://github.com/ItxHayd/Background_Remover"
+                    demo="https://itxhayd.github.io/Background_Remover/"
                 />
               
             
