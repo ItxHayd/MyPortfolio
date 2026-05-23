@@ -35,10 +35,10 @@ const Hero = () => {
                 className="flex-2 w-[90%] max-w-300 mx-auto"
             >
                 <div
-                    className={`bg-cover rounded-full inline-block self-center h-[30vh] w-[30vh] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.75)]
-                      ${isDark ? "bg-[#555]" : "bg-[#ddd]"}
+                    className={`bg-cover border-4 border-[#00d4ff] rounded-full inline-block self-center h-[30vh] w-[30vh] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.75)]
+                      ${isDark ? "bg-black/60" : "bg-[#ddd]"}
                     `}
-                    style={{ backgroundImage: "url(img.jpg)" }}
+                    style={{ backgroundImage: "url(/icons/self.png)" }}
                 ></div>
 
                 <h2 className={`text-5xl mb-2.5 ${isDark ? "text-white" : "text-[#111]"}`}>
