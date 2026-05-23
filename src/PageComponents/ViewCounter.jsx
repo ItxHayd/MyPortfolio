@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "../Theme";
 
+import EyeIcon from "../components/ui/EyeIcon";
+
 export default function ViewCounter() {
     const {isDark} = useTheme();
     const [views, setViews] = useState(0);
