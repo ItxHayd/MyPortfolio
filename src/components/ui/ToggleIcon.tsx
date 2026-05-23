@@ -14,7 +14,6 @@ export default function ToggleIcon() {
       onClick={() => {
         setIsOn(!isOn);
         setDark(!isDark);
-        console.log(isDark);
       }}
       className={`w-12 h-6 rounded-full translate-x-5 cursor-pointer pr-1 flex bg-red-500 ${isOn ? "justify-start" : "justify-end"}`}
       

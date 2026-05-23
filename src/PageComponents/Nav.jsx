@@ -1,7 +1,9 @@
 import React from "react";
 import ToggleIcon from "../components/ui/ToggleIcon";
 import { motion } from "framer-motion";
-import { useTheme } from "../Theme"; // update path if needed
+import { useTheme } from "../Theme"; 
+import lenis from "../components/lib/lenis.js";
+
 
 const Nav = () => {
   const { isDark } = useTheme();
@@ -27,10 +29,10 @@ const Nav = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="/"
+          onClick={() => lenis.scrollTo(0,{duration:5})}
           className="no-underline"
         >
-          <h1 className="text-2xl font-bold tracking-tight text-[#00d4ff] transition-colors hover:text-[#00b0ff]">
+          <h1 className="text-2xl cursor-pointer font-bold tracking-tight text-[#00d4ff] transition-colors hover:text-[#00b0ff]">
             Hayd
           </h1>
         </motion.a>
@@ -38,13 +40,13 @@ const Nav = () => {
         {/* Links */}
         <div className="flex items-center gap-2 md:gap-6">
           
-          {["About", "Projects", "Contact"].map((item, index) => (
+          {["Projects", "Contact"].map((item, index) => (
             <motion.a
               key={index}
               whileHover={{ y: -2 }}
-              href={`#${item.toLowerCase()}`}
+              onClick={() => lenis.scrollTo(`#${item.toLowerCase()}`,{duration:3})}
               className={`
-                relative text-sm md:text-base font-medium transition-all duration-300
+                relative cursor-pointer text-sm md:text-base font-medium transition-all duration-300
                 
                 ${
                   isDark
