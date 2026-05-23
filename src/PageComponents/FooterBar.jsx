@@ -2,6 +2,7 @@ import React from 'react'
 import EyeIcon from '../components/ui/EyeIcon'
 import { motion } from 'framer-motion'
 import { useTheme } from "../Theme"
+import ViewCounter from './ViewCounter'
 
 const Footer = () => {
 
@@ -34,17 +35,7 @@ const Footer = () => {
                 2025. All rights reserved
             </div>
 
-            <div className={`
-              flex justify-end mr-3 gap-1 md:mr-10 w-[90%] text-[10px] md:text-sm text-right max-w-300 mx-auto
-              ${isDark ? "text-white/50" : "text-black/50"}
-            `}>
-                <EyeIcon 
-                  color={isDark ? "white" : "black"} 
-                  className="size-5 md:size-6 hover:scale-110 transition-transform -translate-y-0.5"
-                />
-                11623
-            </div>
-            
+            <ViewCounter/>
         </div>
     </motion.footer>
   )
