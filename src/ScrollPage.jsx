@@ -1,6 +1,6 @@
 
 import { motion, useScroll } from "framer-motion"
-import Page from "../Page.jsx"
+import Page from "./Page.jsx"
 
 import React from 'react'
 

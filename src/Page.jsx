@@ -6,6 +6,8 @@ import Projects from './PageComponents/Projects.jsx'
 import Hero from './PageComponents/Hero.jsx'
 import { useTheme } from "./Theme"
 import SkillsSection from './PageComponents/SkillsSection.jsx'
+import { Analytics } from "@vercel/analytics/react";
+
 
 const Page = () => {
     const {isDark, setDark } = useTheme();
@@ -18,6 +20,7 @@ const Page = () => {
             <Projects/>
             <ContactMe/>
             <Footer/>
+            <Analytics/>
         </div>
     )
 }
