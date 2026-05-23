@@ -8,7 +8,7 @@ export default function ViewCounter() {
     const [views, setViews] = useState(0);
 
     useEffect(() => {
-        fetch("/api/views")
+        fetch("https://portfolio-views.hayd.workers.dev/")
         .then((res) => res.json())
         .then((data) => setViews(data.views));
     }, []);
