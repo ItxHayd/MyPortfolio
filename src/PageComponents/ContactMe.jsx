@@ -113,7 +113,28 @@ const ContactMe = () => {
               className="transition-transform duration-300"
             />
           </motion.a>
+          
+          
         </div>
+        <div className="flex justify-center mt-4 gap-1">
+            <p className={`
+                text-sm font-medium
+                ${isDark ? "text-white/70" : "text-black/60"} 
+              `}>
+                OR view my  
+              </p>
+            <a
+              href="/Resume.pdf"   // change this to your actual CV link
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`
+                text-sm font-bold  transition-colors duration-300
+                ${isDark ? "text-white/70 hover:text-white" : "text-black/60 hover:text-black"}
+              `}
+            >
+              CV
+            </a>
+          </div>
       </div>
     </motion.section>
   );
