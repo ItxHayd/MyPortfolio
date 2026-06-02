@@ -6,7 +6,7 @@ import { Howl } from "howler"
 
 const clickSound = new Howl({
   src: ["/click.mp3"],
-  volume: 0.2,
+  volume: 0.1,
 })
 
 export default function ClickEffect() {
