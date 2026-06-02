@@ -4,18 +4,25 @@ import { motion } from "framer-motion";
 import { useTheme } from "../Theme"; 
 import lenis from "../components/lib/lenis.js";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 const Nav = () => {
+
+  useGSAP(() => {
+    gsap.from("#nav", {
+      y: -100,
+      duration: 0.8
+    });
+  });
   const { isDark } = useTheme();
+ 
 
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <nav 
       className={`
-        sticky top-0 z-50 py-5 backdrop-blur-xl border-b transition-all duration-300
-        
+        sticky top-0 z-50 py-5 backdrop-blur-xl border-b transition-all duration-300 
         ${
           isDark
             ? "border-white/10 bg-[#121212]/70"
@@ -32,13 +39,14 @@ const Nav = () => {
           onClick={() => lenis.scrollTo(0,{duration:5})}
           className="no-underline"
         >
-          <h1 className="text-2xl cursor-pointer font-bold tracking-tight text-[#00d4ff] transition-colors hover:text-[#00b0ff]">
+          <h1 id="nav-logo" className="text-2xl cursor-pointer font-bold tracking-tight text-[#00d4ff] transition-colors hover:text-[#00b0ff]">
             Hayd
           </h1>
         </motion.a>
 
         {/* Links */}
-        <div className="flex items-center gap-2 md:gap-6">
+
+        <div id="nav" className="flex items-center gap-2 md:gap-6">
           
           {["Projects", "Contact"].map((item, index) => (
             <motion.a
@@ -73,7 +81,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

@@ -6,6 +6,7 @@ import Projects from './PageComponents/Projects.jsx'
 import Hero from './PageComponents/Hero.jsx'
 import { useTheme } from "./Theme"
 import SkillsSection from './PageComponents/SkillsSection.jsx'
+import Testimonials from './PageComponents/Testimonials.jsx'
 
 
 const Page = () => {
@@ -17,6 +18,7 @@ const Page = () => {
             <Hero/>
             <SkillsSection/>
             <Projects/>
+            <Testimonials/>
             <ContactMe/>
             <Footer/>
         </div>
