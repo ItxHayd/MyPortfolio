@@ -3,7 +3,10 @@ import { motion } from 'framer-motion'
 import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
-  return (
+  return (<>
+    <motion.div initial={{ y: 100, opacity: 0 }} whileInView={{opacity: 1,y: 0,filter: "blur(0px)"}} transition={{duration: 1.2,ease: "easeOut"}} viewport={{ once: true }} className=" text-[#00d4ff] flex justify-center content-center font-bold text-4xl">
+        Projects
+    </motion.div>
     <motion.section
         initial={{
             opacity: 0,
@@ -24,9 +27,6 @@ const Projects = () => {
     >
         <div className="w-[90%] max-w-300 mx-auto" >
 
-            <h2 className=" text-[#00d4ff] mb-10 text-4xl">
-                Projects:
-            </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
@@ -72,6 +72,7 @@ const Projects = () => {
             </div>
         </div>
     </motion.section>
+    </>
   )
 }
 
