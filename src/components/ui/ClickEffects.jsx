@@ -1,23 +1,28 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { Howl } from "howler"
 
-
-const clickSound = new Howl({
-  src: ["/click.mp3"],
-  volume: 0.1,
-})
-
 export default function ClickEffect() {
+  const soundRef = useRef(null)
+
   useEffect(() => {
+    // create sound AFTER user interaction
+    const initSound = () => {
+      if (!soundRef.current) {
+        soundRef.current = new Howl({
+          src: ["/click.mp3"],
+          volume: 0.1,
+        })
+      }
+    }
+
     const handleClick = (e) => {
-     
-      clickSound.play()
+      initSound()
 
-     
+      soundRef.current.play()
+
       const ripple = document.createElement("span")
-
       ripple.className = "click-ripple"
 
       ripple.style.left = `${e.clientX}px`
@@ -25,16 +30,12 @@ export default function ClickEffect() {
 
       document.body.appendChild(ripple)
 
-      setTimeout(() => {
-        ripple.remove()
-      }, 600)
+      setTimeout(() => ripple.remove(), 600)
     }
 
     window.addEventListener("click", handleClick)
 
-    return () => {
-      window.removeEventListener("click", handleClick)
-    }
+    return () => window.removeEventListener("click", handleClick)
   }, [])
 
   return null

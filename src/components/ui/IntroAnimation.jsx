@@ -65,7 +65,7 @@ export default function IntroAnimation({ onComplete }) {
         className="text-6xl font-inter text-[#00d4ff]"
         style={{ fontFamily: "inherit" }}
       >
-        Hayd...
+        Loading ...
       </span>
     </div>
   );

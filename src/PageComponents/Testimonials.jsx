@@ -117,14 +117,14 @@ export default function Testimonials() {
         <div className="relative">
           {/* Fade edges */}
           <div
-            className={`absolute left-0 top-0 h-full w-6 md:w-24 z-20 pointer-events-none
+            className={`absolute left-0 top-0 h-full w-2 md:w-24 z-20 pointer-events-none
             ${isDark
               ? "bg-linear-to-r from-black via-black/80 to-transparent"
               : "bg-linear-to-r from-white via-white/80 to-transparent"
             }`}
           />
           <div
-            className={`absolute right-0 top-0 h-full w-6 md:w-24 z-20 pointer-events-none
+            className={`absolute right-0 top-0 h-full w-2  md:w-24 z-20 pointer-events-none
             ${isDark
               ? "bg-linear-to-l from-black via-black/80 to-transparent"
               : "bg-linear-to-l from-white via-white/80 to-transparent"
@@ -136,11 +136,11 @@ export default function Testimonials() {
             onClick={() => scroll("left")}
             className={`cursor-pointer absolute left-0 md:left-2 top-1/2 -translate-y-1/2 -translate-x-1/4 z-30 p-3 rounded-full transition-all
             ${isDark
-              ? "bg-zinc-900 text-white hover:bg-zinc-800"
+              ? "bg-zinc-700/70 text-white hover:bg-zinc-600/70"
               : "bg-white text-black hover:bg-zinc-100 shadow-md"
             }`}
           >
-            <ChevronLeft size={22} />
+            <ChevronLeft size={20} />
           </button>
 
           {/* Right Button */}
@@ -148,11 +148,11 @@ export default function Testimonials() {
             onClick={() => scroll("right")}
             className={`cursor-pointer absolute right-0 md:right-2 top-1/2 -translate-y-1/2 translate-x-1/4 z-30 p-3 rounded-full transition-all
             ${isDark
-              ? "bg-zinc-900 text-white hover:bg-zinc-800"
+              ? "bg-zinc-700/70 text-white hover:bg-zinc-600/70"
               : "bg-white text-black hover:bg-zinc-100 shadow-md"
             }`}
           >
-            <ChevronRight size={22} />
+            <ChevronRight size={20} />
           </button>
 
           {/* Scrollable container */}
