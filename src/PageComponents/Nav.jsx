@@ -10,12 +10,6 @@ import gsap from "gsap";
 
 const Nav = () => {
 
-  useGSAP(() => {
-    gsap.from("#nav", {
-      y: -100,
-      duration: 0.8
-    });
-  });
   const { isDark } = useTheme();
  
 

@@ -16,7 +16,7 @@ const Hero = () => {
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: sectionRef.current,
+        trigger: sectionRef.current,   
         start: "top 85%",
         once: true,
       },
@@ -24,6 +24,7 @@ const Hero = () => {
 
     tl.from(leftRef.current, {
       opacity: 0,
+      delay: 3.5,
       x: "-100%",
       filter: "blur(10px)",
       duration: 0.9,
@@ -44,7 +45,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="text-center py-25 px-5"
+      className="text-center py-25 px-5 overflow-hidden"
     >
       <div className="lg:flex">
         <div
