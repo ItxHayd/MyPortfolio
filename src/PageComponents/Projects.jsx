@@ -51,7 +51,7 @@ const Projects = () => {
                 <ProjectCard
                     image="/projectsMedia/Static-gen.jpg"
                     title="Static Site Generator (Node)"
-                    description="A lightweight static website generator built with Node.js that converts templates and content into fast, SEO-friendly static HTML pages. Ideal for blogs, portfolios, and small websites with minimal setup and fast performance."
+                    description="A static website generator built with Node.js for blogs, portfolios, small websites."
                     tech={["Glob", "EJS", "Node"]}
                     github="https://github.com/ItxHayd/Static-Website_Generator"
                     demoIsAvailable = {false}
