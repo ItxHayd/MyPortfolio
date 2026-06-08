@@ -118,12 +118,10 @@ export default function IntroAnimation({ onComplete }) {
           10% {
             width: 0;
           }
-          45%,
-          55% {
+          45%,55% {
             width: 6.2em;
           }
-          90%,
-          100% {
+          90%,100% {
             width: 0;
           }
         }
